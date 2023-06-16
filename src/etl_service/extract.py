@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def get_api_data(url: str) -> dict:
+def get_api_data(url: str):
     response = requests.get(url)
     if response.status_code == 200:
         return response.json()
@@ -21,7 +21,7 @@ urls = {
     "appointment": f"{os.getenv('BASE_URL')}/appointment",
     "councillor": f"{os.getenv('BASE_URL')}/councillor",
     "patient_councillor": f"{os.getenv('BASE_URL')}/patient_councillor",
-    "rating": f"{os.getenv('BASE_URL')}/rating",
+    "rating": f"{os.getenv('BASE_URL')}/rating"
 }
 
 
