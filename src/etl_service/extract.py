@@ -14,14 +14,14 @@ def get_api_data(url: str):
     else:
         err_msg = f"Error {response.status_code} occurred while accessing {url}"
         logger.error(err_msg)
-        raise response.raise_for_status()
+        response.raise_for_status()
 
 
 urls = {
     "appointment": f"{os.getenv('BASE_URL')}/appointment",
     "councillor": f"{os.getenv('BASE_URL')}/councillor",
     "patient_councillor": f"{os.getenv('BASE_URL')}/patient_councillor",
-    "rating": f"{os.getenv('BASE_URL')}/rating"
+    "rating": f"{os.getenv('BASE_URL')}/rating",
 }
 
 
