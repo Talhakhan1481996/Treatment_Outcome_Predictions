@@ -13,11 +13,12 @@ def load_data_to_redis(redis_client, specializations_dfs: dict) -> dict:
     Parameters:
     - redis_client: redis.client.Redis
         redis_client object given by get_redis_client function.
-    specializations_dfs (dict): A dictionary containing specializations (key) dataframes (value).
+    - specializations_dfs: dict 
+        A dictionary containing specializations (key) dataframes (value).
 
     Preconditions:
-    - The `data_transformations()` function should be implemented to get data from transform.py
-    - The `get_redis_client()` function should be implemented to get redis_client from redis_connector.py
+    - The `data_transformations()` function should be called before load_data_to_redis to get data from transform.py
+    - The `get_redis_client()` function should be called before load_data_to_redis to get redis_client from redis_connector.py
 
     Returns:
     dict: The same input dictionary of specializations dataframes.
