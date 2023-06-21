@@ -36,5 +36,3 @@ RUN crontab /etc/cron.d/cronjob
 
 # Run cron and tail the log file
 CMD cron && tail -f /var/log/cron.log
-
-
