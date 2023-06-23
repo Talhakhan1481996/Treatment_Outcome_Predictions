@@ -21,7 +21,8 @@ def load_data_to_redis(
 
     Preconditions:
     - The `data_transformations()` function should be called before load_data_to_redis to get data from transform.py
-    - The `get_redis_client()` function should be called before load_data_to_redis to get redis_client from redis_connector.py
+    - The `get_redis_client()` function should be called before load_data_to_redis to get redis_client from
+      redis_connector.py
 
     Returns:
     dict: The same input dictionary of specializations dataframes.
