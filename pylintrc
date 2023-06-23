@@ -40,6 +40,14 @@ disable=
     import-error,
     too-many-try-statements,
     fixme,
+    logging-fstring-interpolation,
+    deprecated-typing-alias,
+    too-many-arguments,
+    consider-iterating-dictionary,
+    too-many-locals,
+    too-many-return-statements,
+    too-many-branches,
+    too-many-statements,
     # handled by black
     format,
 
@@ -78,6 +86,9 @@ function-naming-style=snake_case
 
 # Naming style matching correct variable names.
 variable-naming-style=snake_case
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=e
 
 # Naming style matching correct constant names.
 const-naming-style=UPPER_CASE

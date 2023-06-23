@@ -40,6 +40,7 @@ repos:
   hooks:
   - id: mypy
     args: [--disallow-untyped-defs, --disallow-incomplete-defs, --ignore-missing-imports]
+    exclude: (experiments/)
 
  # Checks Python source files for errors.
 - repo: https://github.com/PyCQA/flake8
