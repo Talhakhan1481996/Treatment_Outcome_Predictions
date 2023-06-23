@@ -39,6 +39,7 @@ disable=
     missing-docstring,
     import-error,
     too-many-try-statements,
+    fixme,
     # handled by black
     format,
 
