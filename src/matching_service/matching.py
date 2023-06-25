@@ -9,7 +9,7 @@ from redis_connector import get_redis_client
 load_dotenv()
 
 
-def get_report_id_data(report_id: int) -> str:
+def get_report_category(report_id: int) -> str:
     """
     Retrieve the category of a report with the given report_id.
 
@@ -28,6 +28,7 @@ def get_report_id_data(report_id: int) -> str:
         logger.error(err_msg)
         raise
     response_data = response.json()
+    logger.info("Report Category received.")
     return response_data["category"]
 
 
@@ -43,7 +44,7 @@ def matching_councillors(report_id: int, number_of_councillors: int = 15) -> lis
     Returns:
     - list: A list of dictionaries representing the top councillors.
     """
-    report_category = get_report_id_data(report_id)
+    report_category = get_report_category(report_id)
     councillors_with_ratings = json.loads(
         get_redis_client().get(report_category).decode()
     )
