@@ -18,7 +18,7 @@ def get_councillors(report_id: int) -> list[dict]:
     Returns:
     - list[dict]: A list of dictionary containing the retrieved councillors with their avr_rating.
     """
-    result = matching_councillors(report_id, number_of_councillors)
+    result = matching_councillors(report_id)
     return result
 
 
