@@ -6,7 +6,7 @@ app = FastAPI()
 
 
 @app.get("/councillors/{report_id}/")
-def get_councillors(report_id: int, number_of_councillors: int = 15) -> list[dict]:
+def get_councillors(report_id: int) -> list[dict]:
     """
     Retrieve councillors matching the given report_id and number_of_councillors.
 
