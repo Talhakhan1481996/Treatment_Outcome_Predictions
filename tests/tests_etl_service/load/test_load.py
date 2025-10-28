@@ -1,5 +1,4 @@
-import unittest
-import pyspark
+import unittest, pyspark
 from unittest import TestCase
 from unittest.mock import Mock, patch
 from pyspark.sql import SparkSession
